@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prototype</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        width: 100%;
+        height: 70vh;
+        background-image: url("./home-indoor-design-concept.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      
+      ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bolder;
+        background-color: #ffffff;
+        height: 100px;
+        font-size: larger;
+      }
+
+      li {
+        float: left;
+        color: black;
+        transition: color 0.3s ease;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      li:hover {
+        color: rgb(207, 207, 207);
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+      }
+
+      li a:hover {
+        opacity: 30%;
+        color: black;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      .intro {
+        display: flex;
+        height: 150vh;
+        justify-content: center;
+        padding-left: 20px;
+        margin-top: 75px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); 
+        padding: 10px 50px;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .logo-container:hover {
+        transform: scale(1.05);
+      }
+
+      .logo-container img {
+        width: 150px;
+        height: 30px;
+      }
+
+      .forplayers {
+        font-weight: bold;
+        color: black;
+        opacity: 60%;
+        padding-left: 15px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar a {
+        font-weight: bold;
+        color: black;
+        opacity: 60%;
+        font-size: 12px;
+        transition: font-size 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        opacity: 100%;
+        font-size: 15px;
+      }
+
+      
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: white;
+        color: #000;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #555 transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      
+      .header2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 50px;
+        position: relative;
+        z-index: 9;
+      }
+
+      .navbar2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar2 a {
+        font-weight: bold;
+        color: black;
+        opacity: 100%;
+        font-size: 12px;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .navbar2 a:hover {
+        color: #007bff; 
+        opacity: 100%;
+        font-size: 18px; 
+        
+      }
+      .h1 {
+        color: rgb(255, 255, 255);
+        font-size: 1.25rem;
+        max-width: 900px;
+        margin-left: 100px;
+        line-height: 1.5;
+        height: 150vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="./Academy.html">Home styles</a>
+        <a href="./Support.html">Support</a>
+        <a href="./Search.html">Search</a>
+        <div class="tooltip">
+          <a href="register.html">Log in/ Register</a>
+          <div class="tooltiptext">
+            <input type="email" placeholder="Your email:" />
+            <input type="password" placeholder="*********" />
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <div class="logo">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/019/787/015/small/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+        />
+      </div>
+    </ul>
+
+    <div class="intro">
+      <h1 style="color: rgb(119, 131, 114)">
+        Your Home, Your Sanctuary, Our Design.
+      </h1>
+    </div>
+
+
+    <div class="h1">
+      <h1>Transform your space.</h1>
+      <p>
+        Find the perfect balance of style and comfort with our curated
+        collection of modern furniture, decor, and inspiration. Whether you're
+        renovating or refreshing, we’re here to bring your home to life.
+      </p>
+    </div>
+  </body>
+</html>
