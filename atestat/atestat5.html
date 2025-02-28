@@ -8,15 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&display=swap"
+      href="@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap');"
       rel="stylesheet"
     />
 
     <style>
+      
       body {
         width: 100%;
         height: 70vh;
-        background-image: url("./home-indoor-design-concept.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-color: black;
@@ -28,7 +28,7 @@
         box-sizing: border-box;
       }
 
-      
+
       ul {
         list-style-type: none;
         margin: 0;
@@ -103,7 +103,7 @@
           255,
           255,
           0.8
-        ); 
+        );
         padding: 10px 50px;
         width: 100%;
         z-index: 10;
@@ -155,7 +155,7 @@
         font-size: 15px;
       }
 
-      
+
       .tooltip {
         position: relative;
         display: inline-block;
@@ -195,7 +195,7 @@
         opacity: 1;
       }
 
-      
+
       .header2 {
         display: flex;
         justify-content: center;
@@ -222,18 +222,45 @@
       }
 
       .navbar2 a:hover {
-        color: #007bff; 
+        color: #007bff;
         opacity: 100%;
-        font-size: 18px; 
-        
+        font-size: 18px; /
+
       }
       .h1 {
         color: rgb(255, 255, 255);
         font-size: 1.25rem;
         max-width: 900px;
         margin-left: 100px;
+        margin-top: 800px;
         line-height: 1.5;
         height: 150vh;
+      }
+      .intro1{
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+      .intro1 video{
+        width: 100%;
+        
+        position: absolute;
+        
+        z-index: -1;
+      }
+      .intro2{
+        width: 100%;
+        font-size: 25px;
+        height: 80vh;
+        background-color:  rgba(0, 0, 0, 0);
+        padding-top: 350px;
+        padding-left: 100px;
+      }
+      .img1
+      {
+        display: flex;
+        justify-content: left;
+        margin left: 10px;
       }
     </style>
   </head>
@@ -266,20 +293,44 @@
       </div>
     </ul>
 
-    <div class="intro">
+    <!-- <div class="intro">
       <h1 style="color: rgb(119, 131, 114)">
         Your Home, Your Sanctuary, Our Design.
       </h1>
-    </div>
+      <video src="./LUXURY INTERIOR DESIGN_ for spending the best life (2).mp4" style="z-index: 0" autoplay loop height="800px"/>
+    </div> -->
 
+    <div class="intro1">
+      <video
+        src="./LUXURY INTERIOR DESIGN_ for spending the best life (2).mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+
+      <div class="intro2">
+      <h1 style="color: rgb(216, 221, 211)">
+        Your Home, Your Sanctuary, Our Design.
+        
+      </h1>
+      <br>
+    <P style="color:rgb(216, 221, 211)" font size: 20px>Multi award winnning, with a history from 2020</P>
+      <p style="color:rgb(216, 221, 211)" font size: 20px>we provide a wide range of services and on residential sectors</P>
+      </div>
+    </div>
 
     <div class="h1">
       <h1>Transform your space.</h1>
+      <div></div>
       <p>
         Find the perfect balance of style and comfort with our curated
         collection of modern furniture, decor, and inspiration. Whether you're
         renovating or refreshing, we’re here to bring your home to life.
       </p>
+      <div class="content-wrapper">
+    <img src="./home design 1.jpg" alt="Home Design" />
+   
+  </div>
     </div>
   </body>
 </html>
