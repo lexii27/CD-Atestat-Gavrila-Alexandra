@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Sofa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap');"
+      rel="stylesheet"
+    />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            width: 100%;
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(233, 216, 184);
+        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bolder;
+        background-color: #ffffff;
+        height: 100px;
+        font-size: larger;
+      }
+
+      li {
+        float: left;
+        color: black;
+        transition: color 0.3s ease;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      li:hover {
+        color: rgb(207, 207, 207);
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+      }
+
+      li a:hover {
+        opacity: 30%;
+        color: black;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      .intro {
+        display: flex;
+        height: 150vh;
+        justify-content: center;
+        padding-left: 20px;
+        margin-top: 75px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        );
+        padding: 10px 50px;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .logo-container:hover {
+        transform: scale(1.05);
+      }
+
+      .logo-container img {
+        width: 150px;
+        height: 30px;
+      }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar a {
+        font-weight: bold;
+        color: black;
+        opacity: 60%;
+        font-size: 12px;
+        transition: font-size 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        opacity: 100%;
+        font-size: 15px;
+      }
+
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: white;
+        color: #000;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #555 transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+
+      .header2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 50px;
+        position: relative;
+        z-index: 9;
+      }
+
+      .navbar2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar2 a {
+        font-weight: bold;
+        color: black;
+        opacity: 100%;
+        font-size: 12px;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .navbar2 a:hover {
+        color: #007bff;
+        opacity: 100%;
+        font-size: 18px; /
+
+      }
+     
+      .h1 {
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  max-width: 900px;
+  margin-left: 100px;
+  margin-top: 800px;
+  line-height: 1.5;
+  height: 150vh;
+}.content-wrapper {
+  display: flex;
+  align-items: center; /* Vertically center the text and image */
+  justify-content: space-between; /* Ensure space between the image and paragraph */
+  gap: 20px; /* Add space between the text and the image */
+}
+
+.content-wrapper img {
+  width: 400px; /* Set a fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.content-wrapper p {
+  font-size: 18px;
+  max-width: 600px; /* Optional: Set a maximum width for the paragraph */
+}
+      .intro1{
+        width: 100%;
+        height: 80vh;
+        position: relative;
+      }
+      .intro1 video{
+        width: 100%;
+        
+        position: absolute;
+        
+        z-index: -1;
+      }
+      .intro2{
+        width: 100%;
+        font-size: 25px;
+        height: 80vh;
+        background-color:  rgba(0, 0, 0, 0);
+        padding-top: 350px;
+        padding-left: 100px;
+      }
+      .img1
+      {
+        display: flex;
+        justify-content: left;
+        margin-left: 10px;
+      }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .product-img {
+            width: 50%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-details {
+            width: 50%;
+        }
+        .product-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #222;
+            
+        }
+        button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0f0f0f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            
+        }
+
+        button:hover {
+            background: #218838;
+            transform: translateY(-5px);
+        }
+        
+        .product-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 1.8rem;
+            color: #37b842;
+            margin: 20px 0;
+        }
+        .buy-now {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0f0f0f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .buy-now:hover {
+            background-color: #4aac34;
+            transform: translateY(-5px);
+        }
+        .recommended-section {
+            margin-top: 40px;
+        }
+        .recommended-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .recommended-products {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .recommended-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(243, 241, 241, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+        }
+        .recommended-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .recommended-name {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #222;
+        }
+        .recommended-price {
+            font-size: 1.2rem;
+            color: #44ca38;
+            margin-bottom: 10px;
+        }
+        .view-details {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .view-details:hover {
+            background-color: #2980b9;
+        } 
+        #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+           
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Cart Modal */
+        #cartModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        #cartModal .cart-content {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .background{
+            position: fixed;
+        z-index: -1;
+        height: 100%;
+        z-index: -1;
+        background-size: cover; 
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+          <a href="./Academy.html">Home styles</a>
+          <a href="./Support.html">Support</a>
+          <a href="./Search.html">Search</a>
+          <div class="tooltip">
+            <a href="register.html">Log in/ Register</a>
+            <div class="tooltiptext">
+              <input type="email" placeholder="Your email:" />
+              <input type="password" placeholder="*********" />
+              <button type="submit">Submit</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+  
+      <ul>
+        <li><a class="active" href="./home.html">Home</a></li>
+        <li><a href="produse.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <div class="logo">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/019/787/015/small/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+          />
+        </div>
+      </ul>
+    <div class="background">
+        <img src="./close-up-white-marble-textured-background.jpg" alt="background">    
+      </div>
+    <div class="container">
+        <img src="./plant bundle2.webp" alt="Modern Sofa" class="product-img">
+        <div class="product-details">
+            <h1 class="product-title">Plant bundle decor</h1>
+            <p class="product-description">
+                Add a touch of nature and style to your space with this carefully curated bundle of modern decor plants. Featuring a selection of lush greenery in sleek, minimalist pots, this set brings life to any room with ease. From low-maintenance succulents to vibrant ferns and elegant snake plants, each plant is handpicked for its aesthetic appeal and air-purifying qualities. Perfect for enhancing your living room, office, or bedroom, these plants are designed to complement modern interiors with their clean lines and contemporary look. Whether placed on a tabletop, shelf, or windowsill, this plant bundle effortlessly elevates your decor while creating a calming, natural atmosphere.
+            </p>
+            <p class="product-price">$69.99</p>
+            <button onclick="addToCart('Coffee table')">Add to Cart</button>
+        </div>
+    </div>
+     <!-- Cart Button -->
+<div id="cart">
+    
+    <span id="cartCount">
+        <h4 style="display: inline; margin: 0;">Your cart :</h4> 0
+      </span>
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal">
+    <div class="cart-content">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        
+        <button onclick="closeCart()">Close</button>
+    </div>
+</div>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    // Function to add products to the cart
+    function addToCart(productName, price) {
+        cart.push({ productName, price });
+        total += price;
+        updateCart();
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+        const cartCount = document.getElementById('cartCount');
+        const cartItems = document.getElementById('cartItems');
+        const totalPrice = document.getElementById('totalPrice');
+
+        // Update cart count
+        cartCount.innerText = cart.length;
+
+        // Update cart items list
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = `${item.productName} - $${item.price}`;
+            cartItems.appendChild(li);
+        });
+
+        // Update total price
+        totalPrice.innerText = total.toFixed(2);
+    }
+
+    // Function to open the cart modal
+    document.getElementById('cart').onclick = function () {
+        document.getElementById('cartModal').style.display = 'block';
+    };
+
+    // Function to close the cart modal
+    function closeCart() {
+        document.getElementById('cartModal').style.display = 'none';
+    }
+</script>
+
+    <div class="recommended-section">
+        <h2 class="recommended-title">Recommended Products</h2>
+        <div class="recommended-products">
+            <div class="recommended-item">
+                <img src="./modern chair.webp" alt="Modern Chair" class="recommended-img">
+                <h3 class="recommended-name">Modern Chair</h3>
+                <p class="recommended-price">$199.99</p>
+                <a href="./modern chairs.html" class="view-details">View Details</a>
+            </div>
+            <div class="recommended-item">
+                <img src="./plant bundle1.webp" alt="Modern Table" class="recommended-img">
+                <h3 class="recommended-name">Plant decor bundle</h3>
+                <p class="recommended-price">$69.99</p>
+                <a href="#" class="view-details">View Details</a>
+            </div>
+            <div class="recommended-item">
+                <img src="./modern lam" alt="Modern Lamp" class="recommended-img">
+                <h3 class="recommended-name">Modern Lamp</h3>
+                <p class="recommended-price">$99.99</p>
+                <a href="#" class="view-details">View Details</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+      </footer>
+</body>
+</html>

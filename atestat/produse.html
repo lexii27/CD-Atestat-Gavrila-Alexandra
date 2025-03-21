@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Design Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("./close-up-white-marble-textured-background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        /* Navbar container */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 20;
+        }
+
+        /* Navbar links */
+        .navbar a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            padding: 14px 20px;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        .navbar a:hover {
+            color: #1d3e58;
+            transform: translateY(-3px);
+        }
+
+        /* Active link */
+        .navbar a.active {
+            color: #000000;
+            border-bottom: 2px solid #8f8f8f;
+        }
+
+        /* Products Container */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 6p0px;
+            padding: 100px 20px 20px; /* Adjust padding to avoid navbar overlap */
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Product Card */
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        button {
+            background: #464545;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        
+        footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./produse.html" class="active">Catalog</a>
+        <a href="#">Log in</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Product Container -->
+    <div class="container">
+        <!-- Example of multiple products -->
+        <div class="product">
+            <img src="./modern sofa2.webp" alt="Modern Sofa">
+            <h3>Modern Sofa</h3>
+            <p>Stylish and comfortable sofa for your living room.</p>
+            <p class="price">$399.99</p>
+            <button onclick="window.location.href='modernsofa.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./coffee table2.jpg" alt="Wooden Coffee Table">
+            <h3>Wooden Coffee Table</h3>
+            <p>Elegant wooden table to complement your home decor.</p>
+            <p class="price">$249.99</p>
+            <button onclick="window.location.href='coffee table.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./modern lamp2.jpg" alt="Designer Lamp">
+            <h3>Designer Lamp</h3>
+            <p>A modern lamp for ambient lighting in any room.</p>
+            <p class="price">$89.99</p>
+            <button onclick="window.location.href='modern lamp.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./decorative vase2.jpg" alt="Decorative Vase">
+            <h3>Decorative Vase</h3>
+            <p>Handcrafted vase to enhance the beauty of your living space.</p>
+            <p class="price">$59.99</p>
+            <button onclick="window.location.href='decorative vase.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./plant bundle1.webp" alt="Plant Bundle Decor">
+            <h3>Plant Bundle Decor</h3>
+            <p>Handcrafted vase to enhance the beauty of your living space.</p>
+            <p class="price">$69.99</p>
+            <button onclick="window.location.href='modern plant bundle.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./fairy lights1.webp" alt="Plant Bundle Decor">
+            <h3>Fairy Lights</h3>
+            <p>Twinkling fairy lights to add a cozy touch to any space.</p>
+            <p class="price">$7.99</p>
+            <button onclick="window.location.href='fairy lights.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./modern table1.png" alt="Plant Bundle Decor">
+            <h3>Modern dining table</h3>
+            <p>A stylish, durable modern dining table for any home.</p>
+            <p class="price">$299.99</p>
+            <button onclick="window.location.href='moderntable.html';">Details</button>
+        </div>
+    </div>
+
+   
+   
+    <footer>
+        <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </footer>
+
+</body>
+</html>

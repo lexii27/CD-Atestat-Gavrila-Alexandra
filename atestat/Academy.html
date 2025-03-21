@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>prototype</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap');"
-      rel="stylesheet"
-    />
-
-    <style>
-      
-      body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body {
         width: 100%;
         height: 70vh;
         background-repeat: no-repeat;
@@ -135,7 +127,7 @@
         align-items: center;
       }
 
-      .navbar {
+    .navbar {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -227,15 +219,31 @@
         font-size: 18px; /
 
       }
+     
       .h1 {
-        color: rgb(255, 255, 255);
-        font-size: 1.25rem;
-        max-width: 900px;
-        margin-left: 100px;
-        margin-top: 800px;
-        line-height: 1.5;
-        height: 150vh;
-      }
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  max-width: 900px;
+  margin-left: 100px;
+  margin-top: 800px;
+  line-height: 1.5;
+  height: 150vh;
+}.content-wrapper {
+  display: flex;
+  align-items: center; /* Vertically center the text and image */
+  justify-content: space-between; /* Ensure space between the image and paragraph */
+  gap: 20px; /* Add space between the text and the image */
+}
+
+.content-wrapper img {
+  width: 400px; /* Set a fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.content-wrapper p {
+  font-size: 18px;
+  max-width: 600px; /* Optional: Set a maximum width for the paragraph */
+}
       .intro1{
         width: 100%;
         height: 80vh;
@@ -260,77 +268,52 @@
       {
         display: flex;
         justify-content: left;
-        margin left: 10px;
+        margin-left: 10px;
       }
-    </style>
-  </head>
-  <body>
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+</style>
+<body>
     <header class="header">
-      <nav class="navbar">
-        <a href="./Academy.html">Home styles</a>
-        <a href="./Support.html">Support</a>
-        <a href="./Search.html">Search</a>
-        <div class="tooltip">
-          <a href="register.html">Log in/ Register</a>
-          <div class="tooltiptext">
-            <input type="email" placeholder="Your email:" />
-            <input type="password" placeholder="*********" />
-            <button type="submit">Submit</button>
+        <nav class="navbar">
+          <a href="./Academy.html">Home styles</a>
+          <a href="./Support.html">Support</a>
+          <a href="./Search.html">Search</a>
+          <div class="tooltip">
+            <a href="register.html">Log in/ Register</a>
+            <div class="tooltiptext">
+              <input type="email" placeholder="Your email:" />
+              <input type="password" placeholder="*********" />
+              <button type="submit">Submit</button>
+            </div>
           </div>
+        </nav>
+      </header>
+  
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <div class="logo">
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/019/787/015/small/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+          />
         </div>
-      </nav>
-    </header>
-
-    <ul>
-      <li><a class="active" href="#home">Home</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#about">About</a></li>
-      <div class="logo">
-        <img
-          src="https://static.vecteezy.com/system/resources/thumbnails/019/787/015/small/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
-        />
-      </div>
-    </ul>
-
-    <!-- <div class="intro">
-      <h1 style="color: rgb(119, 131, 114)">
-        Your Home, Your Sanctuary, Our Design.
-      </h1>
-      <video src="./LUXURY INTERIOR DESIGN_ for spending the best life (2).mp4" style="z-index: 0" autoplay loop height="800px"/>
-    </div> -->
-
-    <div class="intro1">
-      <video
-        src="./LUXURY INTERIOR DESIGN_ for spending the best life (2).mp4"
-        autoplay
-        muted
-        loop
-      ></video>
-
-      <div class="intro2">
-      <h1 style="color: rgb(216, 221, 211)">
-        Your Home, Your Sanctuary, Our Design.
-        
-      </h1>
-      <br>
-    <P style="color:rgb(216, 221, 211)" font size: 20px>Multi award winnning, with a history from 2020</P>
-      <p style="color:rgb(216, 221, 211)" font size: 20px>we provide a wide range of services and on residential sectors</P>
-      </div>
-    </div>
-
-    <div class="h1">
-      <h1>Transform your space.</h1>
-      <div></div>
-      <p>
-        Find the perfect balance of style and comfort with our curated
-        collection of modern furniture, decor, and inspiration. Whether you're
-        renovating or refreshing, we’re here to bring your home to life.
-      </p>
-      <div class="content-wrapper">
-    <img src="./home design 1.jpg" alt="Home Design" />
-   
-  </div>
-    </div>
-  </body>
+      </ul>
+      <footer>
+        <p>&copy; 2025 Interior Design. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+      </footer>
+      
+</body>
 </html>

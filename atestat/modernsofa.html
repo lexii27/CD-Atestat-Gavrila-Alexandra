@@ -1,0 +1,293 @@
+
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Sofa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            width: 100%;
+        height: 70vh;
+        overflow-x: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgb(233, 216, 184);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .product-img {
+            width: 50%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .product-details {
+            width: 50%;
+        }
+        .product-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #222;
+            
+        }
+        
+        
+        .product-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 1.8rem;
+            color: #37b842;
+            margin: 20px 0;
+        }
+        .buy-now {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0f0f0f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .buy-now:hover {
+            background-color: #4aac34;
+            transform: translateY(-5px);
+        }
+        .recommended-section {
+            margin-top: 40px;
+        }
+        .recommended-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .recommended-products {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .recommended-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 15px;
+        }
+        .recommended-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .recommended-name {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: #222;
+        }
+        .recommended-price {
+            font-size: 1.2rem;
+            color: #44ca38;
+            margin-bottom: 10px;
+        }
+        .view-details {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .view-details:hover {
+            background-color: #2980b9;
+        } 
+        .background{
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        z-index: -1;
+        background-size: cover; 
+    }
+    #cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #fafafa;
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            
+            font-size: 20px;
+            cursor: pointer;
+        }
+     /* Cart Modal */
+     #cartModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        #cartModal .cart-content {
+            background: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .background{
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-size: cover; 
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        width:100%;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+    footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img src="./close-up-white-marble-textured-background.jpg" alt="background">    
+      </div>
+    <div class="container">
+        <img src="./modern sofa.webp" alt="Modern Sofa" class="product-img">
+        <div class="product-details">
+            <h1 class="product-title">Modern Sofa</h1>
+            <p class="product-description">
+                Experience the ultimate comfort and style with our modern sofa. Designed with premium materials and a sleek aesthetic, this sofa is perfect for any contemporary living space. Its durable construction ensures long-lasting use, while the plush cushions provide exceptional relaxation.
+            </p>
+            <p class="product-price">$799.99</p>
+            <a href="#" class="buy-now">Buy Now</a>
+        </div>
+    </div>
+     <!-- Cart Button -->
+<div id="cart">
+    
+    <span id="cartCount">
+        <h4 style="display: inline; margin: 0;">Your cart :</h4> 0
+      </span>
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal">
+    <div class="cart-content">
+        <h2>Your Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="totalPrice" style="display: inline; margin: 0;">0</span></p>
+<span id="cartCount">
+  <h4 style="display: inline; margin: 0;">Your cart :</h4> 0
+</span>
+
+        <button onclick="closeCart()">Close</button>
+    </div>
+</div>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    // Function to add products to the cart
+    function addToCart(productName, price) {
+        cart.push({ productName, price });
+        total += price;
+        updateCart();
+    }
+
+    // Function to update the cart display
+    function updateCart() {
+        const cartCount = document.getElementById('cartCount');
+        const cartItems = document.getElementById('cartItems');
+        const totalPrice = document.getElementById('totalPrice');
+
+        // Update cart count
+        cartCount.innerText = cart.length;
+
+        // Update cart items list
+        cartItems.innerHTML = '';
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = `${item.productName} - $${item.price}`;
+            cartItems.appendChild(li);
+        });
+
+        // Update total price
+        totalPrice.innerText = total.toFixed(2);
+    }
+
+    // Function to open the cart modal
+    document.getElementById('cart').onclick = function () {
+        document.getElementById('cartModal').style.display = 'block';
+    };
+
+    // Function to close the cart modal
+    function closeCart() {
+        document.getElementById('cartModal').style.display = 'none';
+    }
+   
+</script>
+
+    <div class="recommended-section">
+        <h2 class="recommended-title">Recommended Products</h2>
+        <div class="recommended-products">
+            <div class="recommended-item">
+                <img src="./plant bundle1.webp" alt="Modern Chair" class="recommended-img">
+                <h3 class="recommended-name">Plant bundle decor</h3>
+                <p class="recommended-price">$69.99</p>
+                <a href="./modern plant bundle.html" class="view-details">View Details</a>
+            </div>
+            <div class="recommended-item">
+                <img src="./modern table1.png" alt="Modern Table" class="recommended-img">
+                <h3 class="recommended-name">Modern Table</h3>
+                <p class="recommended-price">$299.99</p>
+                <a href="#" class="view-details">View Details</a>
+            </div>
+            <div class="recommended-item">
+                <img src="./modern lamp1.webp" alt="Modern Lamp" class="recommended-img">
+                <h3 class="recommended-name">Modern Lamp</h3>
+                <p class="recommended-price">$99.99</p>
+                <a href="#" class="view-details">View Details</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      </footer>
+   
+</body>
+</html>

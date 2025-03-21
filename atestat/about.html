@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Interior Design</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap');"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+      }
+      body {
+        width: 100%;
+        height: 70vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        overflow: hidden;
+        background-color: transparent;
+        color: black;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bolder;
+        background-color: #ffffff;
+        height: 100px;
+        font-size: larger;
+      }
+
+      li {
+        float: left;
+        color: black;
+        transition: color 0.3s ease;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      li:hover {
+        color: rgb(207, 207, 207);
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+      }
+
+      li a:hover {
+        opacity: 30%;
+        color: black;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+
+      .intro {
+        display: flex;
+        height: 150vh;
+        justify-content: center;
+        padding-left: 20px;
+        margin-top: 75px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        );
+        padding: 10px 50px;
+        width: 100%;
+        z-index: 10;
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .logo-container:hover {
+        transform: scale(1.05);
+      }
+
+      .logo-container img {
+        width: 150px;
+        height: 30px;
+      }
+
+      .forplayers {
+        font-weight: bold;
+        color: black;
+        opacity: 60%;
+        padding-left: 15px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar a {
+        font-weight: bold;
+        color: black;
+        opacity: 60%;
+        font-size: 12px;
+        transition: font-size 0.3s ease-in-out;
+        text-decoration: none;
+      }
+
+      .navbar a:hover {
+        opacity: 100%;
+        font-size: 15px;
+      }
+
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: white;
+        color: #000;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent #555 transparent;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+
+      .header2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 50px;
+        position: relative;
+        z-index: 9;
+      }
+
+      .navbar2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .navbar2 a {
+        font-weight: bold;
+        color: black;
+        opacity: 100%;
+        font-size: 12px;
+        text-decoration: none;
+        transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+      }
+
+      .navbar2 a:hover {
+        color: #007bff;
+        opacity: 100%;
+        font-size: 18px; /
+
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 10px 50px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+      }
+
+
+      .header2 {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 10px 50px;
+        margin-top: 80px;
+      }
+
+      .h1 {
+        text-align: center;
+        color: rgb(161, 159, 157);
+        
+        font-size: 2rem;
+        margin-top: 120px;
+        font-weight: italic;
+      }
+
+      .about-content {
+        padding: 40px 20px;
+        background-color: white;
+        margin: 40px auto;
+        max-width: 900px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-content h2 {
+        text-align: center;
+        color: rgb(40, 40, 40);
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+      }
+
+      .about-content p {
+        font-size: 1.1rem;
+        color: rgb(80, 80, 80);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .tips-section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #fff;
+        padding: 40px 20px;
+        margin: 40px auto;
+        max-width: 900px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .tips-section h3 {
+        font-size: 1.5rem;
+        text-align: center;
+        color: rgb(40, 40, 40);
+      }
+
+      .tips-section ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .tips-section li {
+        font-size: 1.1rem;
+        margin: 10px 0;
+        color: rgb(80, 80, 80);
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="./Academy.html">Home styles</a>
+        <a href="./Support.html">Support</a>
+        <a href="./Search.html">Search</a>
+        <div class="tooltip">
+          <a href="register.html">Log in/ Register</a>
+          <div class="tooltiptext">
+            <input type="email" placeholder="Your email:" />
+            <input type="password" placeholder="*********" />
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <div class="logo">
+        <img
+          src="https://static.vecteezy.com/system/resources/thumbnails/019/787/015/small/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png"
+        />
+      </div>
+    </ul>
+
+    <header>
+      
+      
+      </nav>
+    </header>
+
+    <div class="header2">
+      <h1>About Us</h1>
+    </div>
+
+    <div class="h1">
+      <h1>Our Interior Design Philosophy</h1>
+      <p>
+        At Interior Design, we believe in transforming spaces into personalized
+        sanctuaries that reflect the individuality and unique style of each
+        client. Our team of experts blends creativity, functionality, and modern
+        design principles to craft spaces that are not only beautiful but also
+        highly functional. Whether it's a residential or commercial space, our
+        mission is to deliver designs that inspire and enhance everyday life.
+      </p>
+    </div>
+
+    <div class="about-content">
+      <h2>What We Do</h2>
+      <p>
+        We specialize in providing high-quality interior design services for
+        residential and commercial spaces. With a history dating back to 2020, we
+        have garnered expertise in crafting spaces that balance aesthetics with
+        practicality. Our team works closely with clients to understand their needs,
+        preferences, and lifestyles, ensuring that every design is a true reflection
+        of their vision.
+      </p>
+      <p>
+        We offer services including space planning, furniture selection, color
+        consultation, lighting design, and more. Our goal is to provide a seamless
+        design experience, from conceptualization to execution, and make your
+        design dreams a reality.
+      </p>
+    </div>
+
+    <div class="tips-section">
+      <h3>Interior Design Tips</h3>
+      <ul>
+        <li><strong>Start with a neutral base:</strong> Choose neutral colors for walls, floors, and larger furniture pieces, then add color with accessories like cushions, artwork, or curtains.</li>
+        <li><strong>Use lighting wisely:</strong> Layer your lighting with ambient, task, and accent lights to create depth and highlight key features in your space.</li>
+        <li><strong>Incorporate natural elements:</strong> Wood, plants, and natural fabrics help bring warmth and an organic feel to any space.</li>
+        <li><strong>Maximize space:</strong> Use multi-functional furniture, mirrors, and vertical storage to make small spaces feel more open and airy.</li>
+        <li><strong>Personalize your space:</strong> Include personal touches like family photos, heirlooms, or items that reflect your personality to make the space feel truly yours.</li>
+        <li><strong>Balance design elements:</strong> Mix textures, patterns, and materials to create harmony and contrast in your space. Too much of one thing can make a room feel heavy or cluttered.</li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Interior Design. All rights reserved.</p>
+      <p><a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+    </footer>
+  </body>
+</html>
