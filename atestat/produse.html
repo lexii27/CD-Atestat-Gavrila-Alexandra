@@ -4,71 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interior Design Products</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Arial', serif;
             margin: 0;
             padding: 0;
-            background-image: url("./close-up-white-marble-textured-background.jpg");
+            background-image: url("./blackmarble-ezgif.com-webp-to-jpg-converter.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             height: 100vh;
+            overflow-x: hidden;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Navbar container */
+        
         .navbar {
+            
             display: flex;
             justify-content: center;
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent */
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 20;
+            background-color: #222;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
         }
 
-        /* Navbar links */
         .navbar a {
             text-decoration: none;
-            color: rgb(0, 0, 0);
+            color: #fff;
             font-size: 18px;
             padding: 14px 20px;
             margin: 0 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
-        /* Hover effect */
         .navbar a:hover {
-            color: #1d3e58;
+            color: #D3AF37;
             transform: translateY(-3px);
         }
 
-        /* Active link */
         .navbar a.active {
-            color: #000000;
-            border-bottom: 2px solid #8f8f8f;
+            border-bottom: 3px solid #D3AF37;
         }
 
-        /* Products Container */
+       
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 6p0px;
-            padding: 100px 20px 20px; /* Adjust padding to avoid navbar overlap */
+            padding: 100px 10px 10px; 
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
             z-index: 10;
         }
 
-        /* Product Card */
         .product {
-            background: white;
+            background: rgba(40, 40, 40, 0.7);
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
@@ -93,13 +91,13 @@
 
         .price {
             font-size: 18px;
-            color: #28a745;
+            color: #D1A938; 
             font-weight: bold;
             margin: 10px 0;
         }
 
         button {
-            background: #464545;
+            background: #5E5E5E;
             color: white;
             padding: 10px;
             border: none;
@@ -110,38 +108,42 @@
         }
 
         button:hover {
-            background: #218838;
+            color: #D1A938; 
         }
 
         
         footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-      footer a {
-        color: #007bff;
-        text-decoration: none;
-        font-weight: bold;
-      }
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #D1A938; ;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
+    
     <div class="navbar">
         <a href="./home.html">Home</a>
-        <a href="./produse.html" class="active">Catalog</a>
-        <a href="#">Log in</a>
-        <a href="#">Contact</a>
+        <a href="./produse.html" class="active">Our Catalog</a>
+        <a href="./log in.html">Log in</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./map.html">Map</a>
     </div>
 
-    <!-- Product Container -->
-    <div class="container">
-        <!-- Example of multiple products -->
+   
+    <div class="container" style="color: rgb(192, 192, 192);">
+        
         <div class="product">
             <img src="./modern sofa2.webp" alt="Modern Sofa">
             <h3>Modern Sofa</h3>
+            <br>
             <p>Stylish and comfortable sofa for your living room.</p>
             <p class="price">$399.99</p>
             <button onclick="window.location.href='modernsofa.html';">Details</button>
@@ -150,6 +152,7 @@
         <div class="product">
             <img src="./coffee table2.jpg" alt="Wooden Coffee Table">
             <h3>Wooden Coffee Table</h3>
+            <br>
             <p>Elegant wooden table to complement your home decor.</p>
             <p class="price">$249.99</p>
             <button onclick="window.location.href='coffee table.html';">Details</button>
@@ -158,6 +161,7 @@
         <div class="product">
             <img src="./modern lamp2.jpg" alt="Designer Lamp">
             <h3>Designer Lamp</h3>
+            <br>
             <p>A modern lamp for ambient lighting in any room.</p>
             <p class="price">$89.99</p>
             <button onclick="window.location.href='modern lamp.html';">Details</button>
@@ -166,6 +170,7 @@
         <div class="product">
             <img src="./decorative vase2.jpg" alt="Decorative Vase">
             <h3>Decorative Vase</h3>
+            <br>
             <p>Handcrafted vase to enhance the beauty of your living space.</p>
             <p class="price">$59.99</p>
             <button onclick="window.location.href='decorative vase.html';">Details</button>
@@ -174,33 +179,116 @@
         <div class="product">
             <img src="./plant bundle1.webp" alt="Plant Bundle Decor">
             <h3>Plant Bundle Decor</h3>
+            <br>
             <p>Handcrafted vase to enhance the beauty of your living space.</p>
             <p class="price">$69.99</p>
             <button onclick="window.location.href='modern plant bundle.html';">Details</button>
         </div>
 
         <div class="product">
-            <img src="./fairy lights1.webp" alt="Plant Bundle Decor">
+            <img src="./fairy lights1.webp" alt="Fairy Lights">
             <h3>Fairy Lights</h3>
+            <br>
             <p>Twinkling fairy lights to add a cozy touch to any space.</p>
             <p class="price">$7.99</p>
             <button onclick="window.location.href='fairy lights.html';">Details</button>
         </div>
+
         <div class="product">
-            <img src="./modern table1.png" alt="Plant Bundle Decor">
-            <h3>Modern dining table</h3>
+            <img src="./modern table1.png" alt="Modern Dining Table">
+            <h3>Modern Dining Table</h3>
+            <br>
             <p>A stylish, durable modern dining table for any home.</p>
             <p class="price">$299.99</p>
             <button onclick="window.location.href='moderntable.html';">Details</button>
         </div>
+
+        <div class="product">
+            <img src="./modern chair.webp" alt="Modern Abstract Chairs">
+            <h3>Modern Abstract Chairs</h3>
+            <br>
+            <p>Unique, modern chairs that blend art and function.</p>
+            <p class="price">$49.99</p>
+            <button onclick="window.location.href='moderntable.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./modern mirror.jpg" alt="Modern Mirrors">
+            <h3>Modern Mirrors</h3>
+            <br>
+            <p>Modern mirrors feature sleek, minimalist designs that elevate any space.</p>
+            <p class="price">$39.99</p>
+            <button onclick="window.location.href='modern mirror.html';">Details</button>
+        </div>
+
+        <div class="product">
+            <img src="./storage baskets1.jpg" alt="Storage Baskets">
+            <h3>Storage Baskets</h3>
+            <br>
+            <p>Storage baskets provide a stylish, practical solution for organizing any space.</p>
+            <p class="price">$29.99</p>
+            <button onclick="window.location.href='storage baskets.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./bookshelves2.jpg" alt="Storage Baskets">
+            <h3>Bookshelves</h3>
+            <br>
+            <p>Space-saving shelves to keep your books neatly organized.</p>
+            <br>
+            <p class="price">$169.99</p>
+            <button onclick="window.location.href='bookshelves.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./wallart2.jpg" alt="Storage Baskets">
+            <h3>Modern Wall Art</h3>
+            <br>
+            <p>A statement piece that adds character to any room.</p>
+            <br>
+            <p class="price">$99.99</p>
+            <button onclick="window.location.href='storage baskets.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./nightstand 2.webp" alt="Storage Baskets">
+            <h3>Modern Nightstand</h3>
+            <br>
+            <p>A statement piece that brings character and style to any bedroom.</p>
+            <br>
+            <p class="price">$89.99</p>
+            <button onclick="window.location.href='storage baskets.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./blanket2.jpg" alt="Storage Baskets">
+            <h3>Fur Blanket</h3>
+            <br>
+            <p>Adds cozy elegance and charm to any room.</p>
+            <br><br>
+            <p class="price">$29.99</p>
+            <button onclick="window.location.href='storage baskets.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./curtains1.jpg" alt="Storage Baskets">
+            <h3>Blackout curtains</h3>
+            <br>
+            <p>Offers privacy, light control, and a touch of sophistication to any room.</p>
+            <br>
+            <p class="price">$399.99</p>
+            <button onclick="window.location.href='storage baskets.html';">Details</button>
+        </div>
+        <div class="product">
+            <img src="./candles1.jpg" alt="Storage Baskets">
+            <h3>Cozy Candles Bundle</h3>
+            <br>
+            <p>Creates a warm, inviting atmosphere and adds a touch of elegance to any space..</p>
+            <br>
+            <p class="price">$49.99</p>
+            <button onclick="window.location.href='storage baskets.html';">Details</button>
+        </div>
     </div>
 
-   
-   
     <footer>
         <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
         <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-      </footer>
+    </footer>
 
 </body>
 </html>

@@ -3,175 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>prototype</title>
+    <title>Home -- Fruit Salad</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="@import url('https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap');"
+      href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      
-      body {
-        width: 100%;
-        height: 70vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-color: black;
-      }
-
-      
-      .intro {
-        display: flex;
-        height: 150vh;
-        justify-content: center;
-        padding-left: 20px;
-        margin-top: 75px;
-      }
-
-      .logo img {
-        width: 300px; 
-        padding-top:70px;
-    height: auto;
-    padding-left:130px;
-    
-}
-
-      .logo-container {
-        display: flex;
-        align-items: right;
-        justify-content: flex-end; 
-        transition: transform 0.3s ease-in-out;
-        text-decoration: none;
-      }
-
-      .logo-container:hover {
-        transform: scale(1.05);
-      }
-
-      .logo-container img {
-        width: 150px;
-        height: 30px;
-      }
-
       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: 'Arial', sans-serif;
-    }
+      body {
+        font-family: 'Arial', sans-serif;
+        width: 100%;
+        background-color: #1c1c1c;
+        color: #fff;
+        overflow-x: hidden;
+      }
 
-    /* Navbar container */
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #ffffff;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
+      
+      .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: #222;
+        padding: 20px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
 
-    /* Navbar links */
-    .navbar a {
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-size: 18px;
-      padding: 14px 20px;
-      margin: 0 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
+      .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 14px 20px;
+        margin: 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
 
-    /* Hover effect */
-    .navbar a:hover {
-      color: #1d3e58;
-      transform: translateY(-3px);
-    }
+      .navbar a:hover {
+        color: #D3AF37;
+        transform: translateY(-3px);
+      }
 
-    /* Active link */
-    .navbar a.active {
-      color: #000000;
-      border-bottom: 2px solid #8f8f8f;
-    }
-      .h1 {
-  color: rgb(255, 255, 255);
-  font-size: 1.25rem;
-  max-width: 900px;
-  margin-left: 100px;
-  margin-top: 800px;
-  line-height: 1.5;
-  height: 150vh;
-}.content-wrapper {
-  display: flex;
-  align-items: center; /* Vertically center the text and image */
-  justify-content: space-between; /* Ensure space between the image and paragraph */
-  gap: 20px; /* Add space between the text and the image */
-}
+      .navbar a.active {
+        border-bottom: 3px solid #D3AF37;
+      }
 
-.content-wrapper img {
-  width: 400px; /* Set a fixed width for the image */
-  height: auto; /* Maintain aspect ratio */
-}
-
-.content-wrapper p {
-  font-size: 18px;
-  max-width: 600px; /* Optional: Set a maximum width for the paragraph */
-}
-      .intro1{
+      
+      .intro1 {
         width: 100%;
         height: 80vh;
         position: relative;
       }
-      .intro1 video{
+
+      .intro1 video {
         width: 100%;
-        
+        height: 100%;
+        object-fit: cover;
         position: absolute;
-        
         z-index: -1;
       }
-      .intro2{
+
+      .intro2 {
         width: 100%;
-        font-size: 25px;
         height: 80vh;
-        background-color:  rgba(0, 0, 0, 0);
-        padding-top: 350px;
-        padding-left: 100px;
-      }
-      .img1
-      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 50px;
         display: flex;
-        justify-content: left;
-        margin-left: 10px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        color: rgb(216, 221, 211);
+        z-index: 2;
       }
+
+      .intro2 h1 {
+        font-size: 3rem;
+        font-family: 'Birthstone', sans-serif;
+        margin-bottom: 10px;
+      }
+
+      .intro2 p {
+        font-size: 1.25rem;
+        max-width: 600px;
+      }
+
+      .h1 {
+        padding: 60px 0;
+        background-color: #2c2c2c;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      .h1 h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .h1 p {
+        font-size: 1.2rem;
+        max-width: 900px;
+        margin: 0 auto 40px;
+        line-height: 1.8;
+        color: #d4ddcf;
+      }
+
+      .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+
+      .content-wrapper img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .content-wrapper p {
+        font-size: 1.15rem;
+        color: #d4ddcf;
+        max-width: 600px;
+        line-height: 1.8;
+      }
+
       footer {
-        background-color: #333;
-        color: white;
+        background-color: #222;
+        color: #fff;
         text-align: center;
         padding: 20px;
+        margin-top: 50px;
       }
+
       footer a {
-        color: #007bff;
+        color: #3498db;
         text-decoration: none;
         font-weight: bold;
       }
+      
     </style>
   </head>
   <body>
+    
     <div class="navbar">
       <a href="./home.html" class="active">Home</a>
       <a href="./produse.html">Our Catalog</a>
       <a href="#">Log in</a>
       <a href="#">Contact</a>
+      <a href="./map.html">Map</a>
     </div>
 
-
-    
-
+   
     <div class="intro1">
       <video
         src="./LUXURY INTERIOR DESIGN_ for spending the best life (2).mp4"
@@ -179,38 +175,34 @@
         muted
         loop
       ></video>
-
       <div class="intro2">
-      <h1 style="color: rgb(216, 221, 211)">
-        Your Home, Your Sanctuary, Our Design.
-        
-      </h1>
-      <br>
-    <P style="color:rgb(216, 221, 211)" font size: 20px>Multi award winnning, with a history from 2020</P>
-      <p style="color:rgb(216, 221, 211)" font size: 20px>we provide a wide range of services and on residential sectors</P>
+        <h1>Your Home, Your Sanctuary, Our Design.</h1>
+        <p>Multi-award-winning, with a history from 2020. We provide a wide range of services in the residential sector.</p>
       </div>
     </div>
-   
+
+    
     <div class="h1">
       <h1>Transform your space.</h1>
-      <p>
-        Find the perfect balance of style and comfort with our curated
-        collection of modern furniture, decor, and inspiration. Whether you're
-        renovating or refreshing, we’re here to bring your home to life.
-      </p>
+     
       <div class="content-wrapper">
         <img src="./home design 1.jpg" alt="Home Design" />
-        <p>More content or additional text next to the image.</p>
+        
+        <p>
+          Find the perfect balance of style and comfort with our curated collection of modern furniture, decor, and inspiration. Whether you're renovating or refreshing, we’re here to bring your home to life.
+        </p>
+        <br>
+         <p>
+          Discover innovative designs that elevate your living spaces to new heights. Our pieces are crafted with the perfect mix of modernity and timeless appeal.
+        </p>
       </div>
     </div>
+
     
     <footer>
       <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
       <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
     </footer>
-    
-   
-  </div>
-    </div>
   </body>
 </html>
+

@@ -12,11 +12,15 @@
     />
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            width: 100%;
-        height: 70vh;
-        background-repeat: no-repeat;
+            font-family: "Arial", sans-serif;
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        margin: 0;
+        background-image: url("./close-up-white-marble-textured-background.jpg");
+        background-repeat: repeat;
         background-size: cover;
+        background-position: center;
         background-color: rgb(233, 216, 184);
         }
         
@@ -24,22 +28,21 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-    }
-
-    /* Navbar container */
+        }
+    
     .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #ffffff;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 20;
     }
 
-    /* Navbar links */
+   
     .navbar a {
       text-decoration: none;
       color: rgb(0, 0, 0);
@@ -51,13 +54,12 @@
       transition: all 0.3s ease;
     }
 
-    /* Hover effect */
     .navbar a:hover {
       color: #1d3e58;
       transform: translateY(-3px);
     }
 
-    /* Active link */
+    
     .navbar a.active {
       color: #000000;
       border-bottom: 2px solid #8f8f8f;
@@ -102,7 +104,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover effect for button */
 button:hover {
     background-color: #2a8f31;
     transform: translateY(-3px);
@@ -198,7 +199,6 @@ button:hover {
             cursor: pointer;
         }
 
-        /* Cart Modal */
         #cartModal {
             display: none;
             position: fixed;
@@ -238,12 +238,13 @@ button:hover {
     </style>
 </head>
 <body>
-  <div class="navbar">
-    <a href="./home.html" class="active">Home</a>
-    <a href="./produse.html">Our Catalog</a>
-    <a href="#">Log in</a>
-    <a href="#">Contact</a>
-  </div>
+    <div class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./produse.html">Our Catalog</a>
+        <a href="./log in.html" >Log in</a>
+        <a href="./contact.html" class="active">Contact</a>
+        <a href="./map.html">Map</a>
+    </div>
     <div class="background">
         <img src="./close-up-white-marble-textured-background.jpg" alt="background">    
       </div>
@@ -258,7 +259,7 @@ button:hover {
             <button onclick="addToCart('Coffee table')">Add to Cart</button>
         </div>
     </div>
-     <!-- Cart Button -->
+     
 <div id="cart">
     
     <span id="cartCount">
@@ -266,7 +267,7 @@ button:hover {
       </span>
 </div>
 
-<!-- Cart Modal -->
+
 <div id="cartModal">
     <div class="cart-content">
         <h2>Your Cart</h2>

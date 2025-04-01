@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern chair - Fruit Salad</title>
+    <title>Coffee table - Fruit Salad</title>
     <style>
       body {
-         font-family: "Arial", sans-serif;
+        font-family: "Arial", sans-serif;
         width: 100%;
         height: 100vh;
         overflow-x: hidden;
@@ -18,45 +18,38 @@
         background-color: rgb(233, 216, 184);
       }
       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    .navbar {
-      display: flex;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        display: flex;
             justify-content: center;
-            background-color: rgba(255, 255, 255, 0.8); 
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 20;
-    }
+            background-color: #222;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
 
-    
-    .navbar a {
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-size: 18px;
-      padding: 14px 20px;
-      margin: 0 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
+      .navbar a {
+        text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 14px 20px;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.3s ease;
+      }
 
-    
-    .navbar a:hover {
-      color: #1d3e58;
-      transform: translateY(-3px);
-    }
+      .navbar a:hover {
+        color: #D3AF37;
+        transform: translateY(-3px);
+      }
 
-    
-    .navbar a.active {
-      color: #000000;
-      border-bottom: 2px solid #8f8f8f;
-    }
+      .navbar a.active {
+        border-bottom: 3px solid #D3AF37;
+      }
       .container {
         max-width: 1200px;
         margin: 100px auto;
@@ -160,13 +153,7 @@
       .view-details:hover {
         background-color: #2980b9;
       }
-      .background {
-        position: fixed;
-        z-index: -1;
-        height: 100%;
-        z-index: -1;
-        background-size: cover;
-      }
+
       #cart {
         position: fixed;
         top: 20px;
@@ -174,7 +161,6 @@
         background: #fafafa;
         color: rgb(0, 0, 0);
         padding: 15px;
-
         font-size: 20px;
         cursor: pointer;
       }
@@ -197,14 +183,7 @@
         padding: 20px;
         border-radius: 8px;
       }
-      .background {
-        position: fixed;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        background-size: cover;
-      }
+
       button {
         padding: 12px 12px;
         background-color: #000000;
@@ -241,109 +220,37 @@
   </head>
   <body>
     <div class="navbar">
-        <a href="./home.html" class="active">Home</a>
-        <a href="./produse.html">Our Catalog</a>
-        <a href="#">Log in</a>
-        <a href="#">Contact</a>
-      </div>
-    <div class="background">
-      <img
-        src="./close-up-white-marble-textured-background.jpg"
-        alt="background"
-      />
-    </div>
+      <a href="./home.html">Home</a>
+      <a href="./produse.html">Our Catalog</a>
+      <a href="./log in.html" >Log in</a>
+      <a href="./contact.html" class="active">Contact</a>
+      <a href="./map.html">Map</a>
+  </div>
+
     <div class="container">
-      <img src="./modern chair2.webp" alt="Modern Sofa" class="product-img" />
+      <img src="./bookshelves1.jpg" alt="Modern Sofa" class="product-img" />
       <div class="product-details">
-        <h1 class="product-title">Modern Abstract Chair</h1>
+        <h1 class="product-title">Bookshelves</h1>
         <p class="product-description">
-          Transform your space with this bold and unique modern abstract chair.
-          Featuring an innovative design with sleek lines and dynamic shapes,
-          this chair is a striking piece that blends art with functionality. Its
-          contemporary aesthetic is perfect for adding a touch of sophistication
-          to any room, whether it’s a living room, office, or creative space.
-          Made with high-quality materials, this chair offers both comfort and
-          style, making it a standout piece that complements a variety of modern
-          interiors.
+            A bookshelf is a versatile piece of furniture designed to store and display books, decor, and personal items. It typically features multiple horizontal shelves, providing ample space for organizing everything from novels to decorative objects like vases or photo frames. Whether crafted from wood, metal, or glass, bookshelves come in a variety of styles to complement any home decor, from modern minimalist designs to more traditional or rustic looks. Not only do they serve a practical purpose, but they also enhance the aesthetic of a room, creating an inviting and organized atmosphere while showcasing your collection. Perfect for living rooms, offices, or libraries, a bookshelf is an essential element for both storage and style.
         </p>
-        <p class="product-price">$49.99</p>
-        <a href="#" class="buy-now">Buy Now</a>
+        <p class="product-price">$59.99</p>
+        <button onclick="addToCart('Coffee table')">Add to Cart</button>
       </div>
-    </div>
-
-    <div id="cart">
-      <span id="cartCount">
-        <h4 style="display: inline; margin: 0">Your cart :</h4>
-        0
-      </span>
-    </div>
-
-    <div id="cartModal">
-      <div class="cart-content">
-        <h2>Your Cart</h2>
-        <ul id="cartItems"></ul>
-        <p>
-          Total: $<span id="totalPrice" style="display: inline; margin: 0"
-            >0</span
-          >
-        </p>
-        <span id="cartCount">
-          <h4 style="display: inline; margin: 0">Your cart :</h4>
-          0
-        </span>
-
-        <button onclick="closeCart()">Close</button>
       </div>
-    </div>
-
-    <script>
-      let cart = [];
-      let total = 0;
-
-      function addToCart(productName, price) {
-        cart.push({ productName, price });
-        total += price;
-        updateCart();
-      }
-
-      function updateCart() {
-        const cartCount = document.getElementById("cartCount");
-        const cartItems = document.getElementById("cartItems");
-        const totalPrice = document.getElementById("totalPrice");
-
-        cartCount.innerText = cart.length;
-
-        cartItems.innerHTML = "";
-        cart.forEach((item) => {
-          const li = document.createElement("li");
-          li.innerText = `${item.productName} - $${item.price}`;
-          cartItems.appendChild(li);
-        });
-
-        totalPrice.innerText = total.toFixed(2);
-      }
-
-      document.getElementById("cart").onclick = function () {
-        document.getElementById("cartModal").style.display = "block";
-      };
-
-      function closeCart() {
-        document.getElementById("cartModal").style.display = "none";
-      }
-    </script>
 
     <div class="recommended-section">
       <h2 class="recommended-title">Recommended Products</h2>
       <div class="recommended-products">
         <div class="recommended-item">
           <img
-            src="./coffee table.jpg"
-            alt="Coffee table"
+            src="./modern chair.webp"
+            alt="Modern Chair"
             class="recommended-img"
           />
-          <h3 class="recommended-name">Coffee table</h3>
-          <p class="recommended-price">$249.99</p>
-          <a href="./coffee table.html" class="view-details">View Details</a>
+          <h3 class="recommended-name">Modern Chair</h3>
+          <p class="recommended-price">$199.99</p>
+          <a href="./modern chairs.html" class="view-details">View Details</a>
         </div>
         <div class="recommended-item">
           <img
@@ -353,17 +260,13 @@
           />
           <h3 class="recommended-name">Modern Table</h3>
           <p class="recommended-price">$299.99</p>
-          <a href="./m oder" class="view-details">View Details</a>
+          <a href="./moderntable.html" class="view-details">View Details</a>
         </div>
         <div class="recommended-item">
-          <img
-            src="./modern lamp1.webp"
-            alt="Modern Lamp"
-            class="recommended-img"
-          />
+          <img src="./modern lamp1.webp" alt="Modern Lamp" class="recommended-img" />
           <h3 class="recommended-name">Modern Lamp</h3>
           <p class="recommended-price">$99.99</p>
-          <a href="#" class="view-details">View Details</a>
+          <a href="./modern lamp.html" class="view-details">View Details</a>
         </div>
       </div>
     </div>
@@ -371,7 +274,7 @@
       <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
       <p>
         <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms of Service</a>
+        <a href="./terms.html">Terms of Service</a>
       </p>
     </footer>
   </body>
