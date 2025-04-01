@@ -6,34 +6,37 @@
     <title>Fairy lights - Fruit Salad</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            width: 100%;
-        height: 70vh;
+            font-family: "Arial", sans-serif;
+        width: 100%;
+        height: 100vh;
         overflow-x: hidden;
-        background-repeat: no-repeat;
+        margin: 0;
+        background-image: url("./close-up-white-marble-textured-background.jpg");
+        background-repeat: repeat;
         background-size: cover;
+        background-position: center;
         background-color: rgb(233, 216, 184);
         }
         * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
+        }
 
-    body {
-      font-family: 'Arial', sans-serif;
-    }
-
-    /* Navbar container */
+    
     .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #ffffff;
-      padding: 10px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 20;
     }
 
-    /* Navbar links */
+    
     .navbar a {
       text-decoration: none;
       color: rgb(0, 0, 0);
@@ -45,13 +48,12 @@
       transition: all 0.3s ease;
     }
 
-    /* Hover effect */
+    
     .navbar a:hover {
       color: #1d3e58;
       transform: translateY(-3px);
     }
 
-    /* Active link */
     .navbar a.active {
       color: #000000;
       border-bottom: 2px solid #8f8f8f;
@@ -179,7 +181,7 @@
             font-size: 20px;
             cursor: pointer;
         }
-     /* Cart Modal */
+     
      #cartModal {
             display: none;
             position: fixed;
@@ -220,7 +222,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover effect for button */
+
 button:hover {
     background-color: #2a8f31;
     transform: translateY(-3px);
@@ -252,7 +254,7 @@ button:hover {
         <img src="./close-up-white-marble-textured-background.jpg" alt="background">    
       </div>
     <div class="container">
-        <img src="./fairy lights.html" class="product-img">
+        <img src="./fairy lights.jpg" class="product-img">
         <div class="product-details">
             <h1 class="product-title">Fairy lights</h1>
             <p class="product-description">
@@ -261,7 +263,7 @@ button:hover {
             <button onclick="addToCart('Coffee table')">Add to Cart</button>
         </div>
     </div>
-     <!-- Cart Button -->
+    
 <div id="cart">
     
     <span id="cartCount">
@@ -269,7 +271,7 @@ button:hover {
       </span>
 </div>
 
-<!-- Cart Modal -->
+
 <div id="cartModal">
     <div class="cart-content">
         <h2>Your Cart</h2>
@@ -283,23 +285,23 @@ button:hover {
     let cart = [];
     let total = 0;
 
-    // Function to add products to the cart
+    
     function addToCart(productName, price) {
         cart.push({ productName, price });
         total += price;
         updateCart();
     }
 
-    // Function to update the cart display
+    
     function updateCart() {
         const cartCount = document.getElementById('cartCount');
         const cartItems = document.getElementById('cartItems');
         const totalPrice = document.getElementById('totalPrice');
 
-        // Update cart count
+       
         cartCount.innerText = cart.length;
 
-        // Update cart items list
+        
         cartItems.innerHTML = '';
         cart.forEach(item => {
             const li = document.createElement('li');
@@ -307,16 +309,16 @@ button:hover {
             cartItems.appendChild(li);
         });
 
-        // Update total price
+        
         totalPrice.innerText = total.toFixed(2);
     }
 
-    // Function to open the cart modal
+   
     document.getElementById('cart').onclick = function () {
         document.getElementById('cartModal').style.display = 'block';
     };
 
-    // Function to close the cart modal
+    
     function closeCart() {
         document.getElementById('cartModal').style.display = 'none';
     }
