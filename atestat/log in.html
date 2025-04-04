@@ -23,17 +23,19 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(135deg, #111, #222);
-            color: #fff;
-            overflow-x: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+        font-family: "Arial", sans-serif;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, #111, #222);
+        color: #fff;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 100px; 
+      }
+
 
         .navbar {
             display: flex;
@@ -126,7 +128,7 @@
             cursor: pointer;
             width: 100%;
             font-size: 16px;
-            transition: background 0.3s ease;
+            transition: 0.3s ease;
         }
 
         .login-btn:hover {
@@ -146,22 +148,26 @@
             color: #D1A938; 
         }
 
-        footer {
+       
+      footer {
         background-color: #333;
         color: white;
-        width: 100%;
         text-align: center;
         padding: 20px;
-        margin-top: 50px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
       }
+
       footer a {
-        color: #007bff;
+        color: #003bfc96;
         text-decoration: none;
         font-weight: bold;
       }
     </style>
 </head>
 <body>
+    
 
     <div class="navbar">
         <a href="./home.html">Home</a>
@@ -169,6 +175,7 @@
         <a href="./log in.html" class="active">Log in</a>
         <a href="./contact.html">Contact</a>
         <a href="./map.html">Map</a>
+        <a href="./cart.html">Your cart</a>
     </div>
 
     <h1 class="header">Welcome back!</h1>
@@ -186,8 +193,11 @@
 
     <footer>
         <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    </footer>
+        <p>
+          <a href="privacy.html">Privacy Policy</a> | 
+          <a href="terms.html">Terms of Service</a>
+        </p>
+      </footer>
 
 </body>
 </html>

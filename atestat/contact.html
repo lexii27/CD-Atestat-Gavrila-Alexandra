@@ -1,191 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prototype - Live Map</title>
+    <title>Prototype - Contact Us</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap"
+      rel="stylesheet"
     />
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            width: 100%;
-            height: 100vh;
-            background: linear-gradient(135deg, #111, #222);
-            color: #fff;
-            overflow-x: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+      body {
+        font-family: "Arial", sans-serif;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(135deg, #111, #222);
+        color: #fff;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 100px; 
+      }
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px 0;
-            width: 100%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            position: absolute;
-            top: 0;
-        }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        padding: 15px 0;
+        width: 100%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+      }
 
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            padding: 14px 20px;
-            margin: 0 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+      .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 14px 20px;
+        margin: 0 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: color 0.3s ease, transform 0.3s ease;
+      }
 
-        .navbar a:hover {
-            color: #D3AF37;
-            transform: translateY(-3px);
-        }
+      .navbar a:hover {
+        color: #d3af37;
+        transform: translateY(-3px);
+      }
 
-        .navbar a.active {
-            border-bottom: 3px solid #D3AF37;
-        }
+      .navbar a.active {
+        border-bottom: 3px solid #d3af37;
+      }
 
-        .header {
-            font-size: 2.5rem;
-            font-family: '42dot Sans', sans-serif;
-            text-align: center;
-            margin-top: 10px;
-            color: #fff;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+      .header {
+        font-size: 2.5rem;
+        font-family: "42dot Sans", sans-serif;
+        text-align: center;
+        margin-top: 10px;
+        color: #fff;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
 
-        .header:hover {
-            color: #D3AF37;
-            cursor: pointer;
-        }
+      .header:hover {
+        color: #d3af37;
+        cursor: pointer;
+      }
 
-        .login-container {
-            background: rgba(40, 40, 40, 0.9);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 380px;
-            text-align: center;
-            margin-top: 30px;
-        }
+      .login-container {
+        background: rgba(40, 40, 40, 0.9);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 380px;
+        text-align: center;
+        margin-top: 30px;
+      }
 
-        .login-container h2 {
-            color: #D3AF37;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
+      .login-container h2 {
+        color: #d3af37;
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+      }
 
-        .input-field {
-            width: 100%;
-            padding: 12px;
-            margin: 15px 0;
-            background: #444;
-            color: #fff;
-            border: 1px solid #555;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border 0.3s ease;
-        }
+      .input-field {
+        width: 100%;
+        padding: 12px;
+        margin: 15px 0;
+        background: #444;
+        color: #fff;
+        border: 1px solid #555;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border 0.3s ease;
+      }
 
-        .input-field:focus {
-            border-color: #D3AF37;
-            outline: none;
-        }
+      .input-field:focus {
+        border-color: #d3af37;
+        outline: none;
+      }
 
-        .login-btn {
-            background: #666666;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            transition: background 0.3s ease;
-        }
+      .login-btn {
+        background: #666666;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+        transition: 0.3s ease;
+      }
 
-        .login-btn:hover {
-            background: #D3AF37;
-        }
-        button {
-            background: #5E5E5E;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+      .login-btn:hover {
+        background: #d3af37;
+      }
 
-        button:hover {
-            color: #D1A938; 
-        }
+      button {
+        background: #5e5e5e;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
 
-        footer {
+      button:hover {
+        color: #d1a938;
+      }
+
+      footer {
         background-color: #333;
         color: white;
-        width: 100%;
         text-align: center;
         padding: 20px;
-        margin-top: 50px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
       }
+
       footer a {
-        color: #007bff;
+        color: #003bfc96;
         text-decoration: none;
         font-weight: bold;
       }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="navbar">
-        <a href="./home.html">Home</a>
-        <a href="./produse.html">Our Catalog</a>
-        <a href="./log in.html" >Log in</a>
-        <a href="./contact.html" class="active">Contact</a>
-        <a href="./map.html">Map</a>
+      <a href="./home.html">Home</a>
+      <a href="./produse.html">Our Catalog</a>
+      <a href="./log in.html">Log in</a>
+      <a href="./contact.html" class="active">Contact</a>
+      <a href="./map.html">Map</a>
+      <a href="./cart.html">Your cart</a>
     </div>
 
-    <h1 class="header">Have any suggestions? Contact us :</h1>
+    <h1 class="header">Have any suggestions? Contact us below:</h1>
 
-    <div class="login-container">
-        <form action="#" method="POST">
-            <input type="text" name="username" class="input-field" placeholder="Email" required>
-            <textarea name="message" rows="6" cols="50" class="input-field" placeholder="Enter your message here..."></textarea>
+    <form name="submit-to-google-sheet">
+      <input
+        type="text"
+        name="username"
+        class="input-field"
+        placeholder="Email"
+        required
+      />
+      <textarea
+        name="message"
+        rows="6"
+        cols="50"
+        class="input-field"
+        placeholder="Enter your message here..."
+      ></textarea>
 
-            <button type="submit" class="login-btn">Submit</button>
-        </form>
-    </div>
+      <button type="submit" class="login-btn">Submit</button>
+    </form>
+
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbxIMwcduOT6iwaDovz8q4NoqP0nT08H9CtNknYRYGb5wRcqwayqMunF25G8mtu5GXd0/exec';
+      const form = document.forms['submit-to-google-sheet'];
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => console.log('Success!', response))
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
 
     <footer>
-        <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+      <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> | 
+        <a href="terms.html">Terms of Service</a>
+      </p>
     </footer>
-
-</body>
+  </body>
 </html>
+

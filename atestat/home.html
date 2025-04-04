@@ -27,7 +27,6 @@
         overflow-x: hidden;
       }
 
-      
       .navbar {
         display: flex;
         justify-content: center;
@@ -56,7 +55,6 @@
         border-bottom: 3px solid #D3AF37;
       }
 
-      
       .intro1 {
         width: 100%;
         height: 80vh;
@@ -72,29 +70,36 @@
       }
 
       .intro2 {
-        width: 100%;
-        height: 80vh;
         position: absolute;
-        top: 0;
-        left: 0;
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: left;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
         color: rgb(216, 221, 211);
         z-index: 2;
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        font-size: xx-large; 
+        flex-direction: column;
+        justify-content: center;
       }
 
       .intro2 h1 {
-        font-size: 3rem;
+        font-size: 5rem; 
         font-family: 'Birthstone', sans-serif;
         margin-bottom: 10px;
+        color: #D3AF37;
+        text-shadow: #222 0px 0px 10px;
       }
 
       .intro2 p {
-        font-size: 1.25rem;
-        max-width: 600px;
+        font-family: 'Italiana', serif;
+        font-size: 2.75rem; 
+        color: white;
+        max-width: 700px;
+        text-shadow: #222 0px 0px 8px;
+        margin: 0 auto;
       }
 
       .h1 {
@@ -140,21 +145,21 @@
         max-width: 600px;
         line-height: 1.8;
       }
-
       footer {
-        background-color: #222;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        margin-top: 50px;
-      }
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-      footer a {
-        color: #3498db;
-        text-decoration: none;
-        font-weight: bold;
-      }
+        footer a {
+            color: #003bfc96; ;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
       
+
     </style>
   </head>
   <body>
@@ -162,12 +167,12 @@
     <div class="navbar">
       <a href="./home.html" class="active">Home</a>
       <a href="./produse.html">Our Catalog</a>
-      <a href="#">Log in</a>
-      <a href="#">Contact</a>
+      <a href="./log in.html">Log in</a>
+      <a href="./contact.html">Contact</a>
       <a href="./map.html">Map</a>
+      <a href="./cart.html">Your cart</a>
     </div>
 
-   
     <div class="intro1">
       <video
         src="./LUXURY INTERIOR DESIGN_ for spending the best life (2).mp4"
@@ -181,28 +186,21 @@
       </div>
     </div>
 
-    
     <div class="h1">
-      <h1>Transform your space.</h1>
+     
      
       <div class="content-wrapper">
-        <img src="./home design 1.jpg" alt="Home Design" />
+        <img src="./home design 1.jpg" alt="Home Design"/>
+        <div>
+          <h1>Welcome to Fruit Salad</h1>
+          <p>We are a team of passionate designers dedicated to creating beautiful and functional spaces. Our mission is to transform your home into a sanctuary that reflects your unique style and personality.</p> 
         
-        <p>
-          Find the perfect balance of style and comfort with our curated collection of modern furniture, decor, and inspiration. Whether you're renovating or refreshing, we’re here to bring your home to life.
-        </p>
-        <br>
-         <p>
-          Discover innovative designs that elevate your living spaces to new heights. Our pieces are crafted with the perfect mix of modernity and timeless appeal.
-        </p>
       </div>
     </div>
 
-    
     <footer>
       <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
       <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
     </footer>
   </body>
 </html>
-

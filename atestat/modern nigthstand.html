@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee table - Fruit Salad</title>
+    <title>Decorative vase - Fruit Salad</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -21,6 +21,10 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
       }
 
       .navbar {
@@ -153,6 +157,22 @@
       .view-details:hover {
         background-color: #2980b9;
       }
+      .background {
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        z-index: -1;
+        background-size: cover;
+      }
+      
+      .background {
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background-size: cover;
+      }
       button {
         padding: 12px 12px;
         background-color: #000000;
@@ -189,24 +209,33 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="./home.html">Home</a>
+      <a href="./home.html" >Home</a>
       <a href="./produse.html"class="active">Our Catalog</a>
-      <a href="./log in.html" >Log in</a>
-      <a href="./contact.html" >Contact</a>
+      <a href="./log in.html">Log in</a>
+      <a href="./contact.html">Contact</a>
       <a href="./map.html">Map</a>
-  </div>
-
+      <a href="./cart.html">Your cart</a>
+    </div>
+    <div class="background">
+      <img
+        src="./close-up-white-marble-textured-background.jpg"
+        alt="background"
+      />
+    </div>
     <div class="container">
-      <img src="./bookshelves1.jpg" alt="Modern Sofa" class="product-img" />
+      <img src="./nightstand 2.webp" alt="Modern Sofa" class="product-img" />
       <div class="product-details">
-        <h1 class="product-title">Bookshelves</h1>
+        <h1 class="product-title">Modern Nightstand </h1>
         <p class="product-description">
-            A bookshelf is a versatile piece of furniture designed to store and display books, decor, and personal items. It typically features multiple horizontal shelves, providing ample space for organizing everything from novels to decorative objects like vases or photo frames. Whether crafted from wood, metal, or glass, bookshelves come in a variety of styles to complement any home decor, from modern minimalist designs to more traditional or rustic looks. Not only do they serve a practical purpose, but they also enhance the aesthetic of a room, creating an inviting and organized atmosphere while showcasing your collection. Perfect for living rooms, offices, or libraries, a bookshelf is an essential element for both storage and style.
+            This modern nightstand is the perfect blend of functionality and style. Designed with clean lines and a minimalist aesthetic, it effortlessly complements contemporary bedroom decor. Constructed from high-quality materials, it offers both durability and elegance, with a smooth, polished finish that adds a touch of sophistication to any room. Featuring spacious drawers or open shelving, it provides ample storage for your essentials, from books to personal items. Whether placed beside your bed or as a stylish accent in any living space, this nightstand brings a sleek and organized look to your home
         </p>
-        <p class="product-price">$59.99</p>
-        <button onclick="addToCart('Coffee table')">Add to Cart</button>
+
+        <p class="product-price">$129.99</p>
+        <button onclick="addToCart({ id: 'product', name: 'Modern Nightstand', price: 129.99 })">Add to cart</button>
+        <script src="script.js"></script>
       </div>
-      </div>
+    </div>
+
 
     <div class="recommended-section">
       <h2 class="recommended-title">Recommended Products</h2>
@@ -232,10 +261,10 @@
           <a href="./moderntable.html" class="view-details">View Details</a>
         </div>
         <div class="recommended-item">
-          <img src="./modern lamp1.webp" alt="Modern Lamp" class="recommended-img" />
+          <img src="./modern lam" alt="Modern Lamp" class="recommended-img" />
           <h3 class="recommended-name">Modern Lamp</h3>
           <p class="recommended-price">$99.99</p>
-          <a href="./modern lamp.html" class="view-details">View Details</a>
+          <a href="#" class="view-details">View Details</a>
         </div>
       </div>
     </div>

@@ -154,35 +154,6 @@
         background-color: #2980b9;
       }
 
-      #cart {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: #fafafa;
-        color: rgb(0, 0, 0);
-        padding: 15px;
-        font-size: 20px;
-        cursor: pointer;
-      }
-
-      #cartModal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 30px;
-        overflow-y: auto;
-      }
-
-      #cartModal .cart-content {
-        background: #222;
-        padding: 20px;
-        border-radius: 8px;
-      }
 
       button {
         padding: 12px 12px;
@@ -221,14 +192,15 @@
   <body>
     <div class="navbar">
       <a href="./home.html">Home</a>
-      <a href="./produse.html">Our Catalog</a>
+      <a href="./produse.html"class="active">Our Catalog</a>
       <a href="./log in.html" >Log in</a>
-      <a href="./contact.html" class="active">Contact</a>
+      <a href="./contact.html" >Contact</a>
       <a href="./map.html">Map</a>
+      <a href="./cart.html">Your cart</a>
   </div>
 
     <div class="container">
-      <img src="./coffee table.jpg" alt="Modern Sofa" class="product-img" />
+      <img src="./coffee table.jpg"  class="product-img" />
       <div class="product-details">
         <h1 class="product-title">Coffee table</h1>
         <p class="product-description">
@@ -242,7 +214,8 @@
           room.
         </p>
         <p class="product-price">$59.99</p>
-        <button onclick="addToCart('Coffee table')">Add to Cart</button>
+        <button onclick="addToCart({ id: 'product', name: 'Coffee table', price: 59.99 })">Add to cart</button>
+        <script src="script.js"></script>
       </div>
       </div>
 
