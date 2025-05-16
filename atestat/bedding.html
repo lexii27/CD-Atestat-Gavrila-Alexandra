@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Nightstand - Fruit Salad</title>
+    <title>Coffee table - Fruit Salad</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -15,16 +15,12 @@
         background-repeat: repeat;
         background-size: cover;
         background-position: center;
-        background-color: rgb(233, 216, 184);
+        background-color: rgb(41, 41, 41);
       }
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Arial", sans-serif;
       }
 
       .navbar {
@@ -157,22 +153,8 @@
       .view-details:hover {
         background-color: #2980b9;
       }
-      .background {
-        position: fixed;
-        z-index: -1;
-        height: 100%;
-        z-index: -1;
-        background-size: cover;
-      }
-      
-      .background {
-        position: fixed;
-        z-index: -1;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        background-size: cover;
-      }
+
+
       button {
         padding: 12px 12px;
         background-color: #000000;
@@ -209,33 +191,26 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="./home.html" >Home</a>
+      <a href="./home.html">Home</a>
       <a href="./produse.html"class="active">Our Catalog</a>
-      <a href="./log in.html">Log in</a>
-      <a href="./contact.html">Contact</a>
+      <a href="./log in.html" >Log in</a>
+      <a href="./contact.html" >Contact</a>
       <a href="./map.html">Map</a>
       <a href="./cart.html">Your cart</a>
-    </div>
-    <div class="background">
-      <img
-        src="./close-up-white-marble-textured-background.jpg"
-        alt="background"
-      />
-    </div>
-    <div class="container">
-      <img src="./nightstand 2.webp" alt="Modern Sofa" class="product-img" />
-      <div class="product-details">
-        <h1 class="product-title">Modern Nightstand </h1>
-        <p class="product-description">
-            This modern nightstand is the perfect blend of functionality and style. Designed with clean lines and a minimalist aesthetic, it effortlessly complements contemporary bedroom decor. Constructed from high-quality materials, it offers both durability and elegance, with a smooth, polished finish that adds a touch of sophistication to any room. Featuring spacious drawers or open shelving, it provides ample storage for your essentials, from books to personal items. Whether placed beside your bed or as a stylish accent in any living space, this nightstand brings a sleek and organized look to your home
-        </p>
+  </div>
 
-        <p class="product-price">$129.99</p>
-        <button onclick="addToCart({ id: 'product 13', name: 'Modern Nightstand', price: 129.99 })">Add to cart</button>
+    <div class="container">
+      <img src="./bedding.webp"  class="product-img" />
+      <div class="product-details">
+        <h1 class="product-title">Modern Bedding</h1>
+        <p class="product-description">
+            Transform your bedroom into a cozy retreat with this luxurious bedding set, designed for comfort and style. Crafted from soft, breathable fabrics, this set includes everything you need for a restful night’s sleep – from a plush comforter to matching pillowcases and sheets. The elegant design complements any bedroom décor, while the high-quality materials ensure durability and long-lasting comfort. Whether you're updating your space or creating a new sanctuary, this bedding set provides the perfect combination of comfort, warmth, and style.
+        </p>
+        <p class="product-price">$119.99</p>
+        <button onclick="addToCart({ id: 'product 19', name: 'Modern bedding', price: 119.99 })">Add to cart</button>
         <script src="script.js"></script>
       </div>
-    </div>
-
+      </div>
 
     <div class="recommended-section">
       <h2 class="recommended-title">Recommended Products</h2>
@@ -261,10 +236,10 @@
           <a href="./moderntable.html" class="view-details">View Details</a>
         </div>
         <div class="recommended-item">
-          <img src="./modern lamp2.jpg" alt="Modern Lamp" class="recommended-img" />
+          <img src="./modern lamp1.webp" alt="Modern Lamp" class="recommended-img" />
           <h3 class="recommended-name">Modern Lamp</h3>
           <p class="recommended-price">$99.99</p>
-          <a href="#" class="view-details">View Details</a>
+          <a href="./modern lamp.html" class="view-details">View Details</a>
         </div>
       </div>
     </div>

@@ -1,194 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prototype - Live Map</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototype - Live Map</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap"
-        rel="stylesheet"
-    />
-    
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Birthstone&family=Italiana&display=swap"
+    rel="stylesheet"
+  />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-        body {
-            font-family: 'Arial', sans-serif;
-            width: 100%;
-            height: 100vh;
-            background: rgb(29, 29, 29);
-            color: #fff;
-            overflow-x: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px 0;
-            width: 100%;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            position: absolute;
-            top: 0;
-        }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: rgb(29, 29, 29);
+      color: #fff;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        .navbar a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            padding: 14px 20px;
-            margin: 0 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-        .navbar a:hover {
-            color: #D3AF37;
-            transform: translateY(-3px);
-        }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .navbar a.active {
-            border-bottom: 3px solid #D3AF37;
-        }
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 14px 20px;
+      margin: 0 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
 
-        .header {
-            font-size: 2.5rem;
-            font-family: '42dot Sans', sans-serif;
-            text-align: center;
-            margin-top: 10px;
-            color: #fff;
-            letter-spacing: 2px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+    .navbar a:hover {
+      color: #D3AF37;
+      transform: translateY(-3px);
+    }
 
-        .header:hover {
-            color: #D3AF37;
-            cursor: pointer;
-        }
+    .navbar a.active {
+      border-bottom: 3px solid #D3AF37;
+    }
 
-        .login-container {
-            background: rgba(40, 40, 40, 0.9);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-            width: 100%;
-            max-width: 380px;
-            text-align: center;
-            margin-top: 30px;
-        }
+    .header {
+      font-size: 2.5rem;
+      font-family: '42dot Sans', sans-serif;
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-        .login-container h2 {
-            color: #D3AF37;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
-        }
+    .header:hover {
+      color: #D3AF37;
+    }
 
-        .input-field {
-            width: 100%;
-            padding: 12px;
-            margin: 15px 0;
-            background: #444;
-            color: #fff;
-            border: 1px solid #555;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border 0.3s ease;
-        }
+    .login-container {
+      background: rgba(40, 40, 40, 0.9);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      margin: 30px 0;
+    }
 
-        .input-field:focus {
-            border-color: #D3AF37;
-            outline: none;
-        }
+    .login-container h2 {
+      color: #D3AF37;
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
 
-        .login-btn {
-            background: #666666;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            transition: background 0.3s ease;
-        }
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      background: #444;
+      color: #fff;
+      border: 1px solid #555;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border 0.3s ease;
+    }
 
-        .login-btn:hover {
-            background: #D3AF37;
-        }
-        button {
-            background: #5E5E5E;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    .input-field:focus {
+      border-color: #D3AF37;
+      outline: none;
+    }
 
-        button:hover {
-            color: #D1A938; 
-        }
+    .login-btn {
+      background: #666666;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
 
-        footer {
-        background-color: #333;
-        color: white;
-        width: 100%;
-        text-align: center;
-        padding: 20px;
-        margin-top: 50px;
-      }
-      footer a {
-        color: #007bff;
-        font-weight: bold;
-      }
-    </style>
+    .login-btn:hover {
+      background: #D3AF37;
+    }
+
+    button {
+      background: #5E5E5E;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      color: #D1A938;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+
+    footer a {
+      color: #007bff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="./home.html">Home</a>
-        <a href="./produse.html">Our Catalog</a>
-        <a href="./log in.html" class="active">Log in</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./map.html">Map</a>
-    </div>
+  <div class="navbar">
+    <a href="./home.html">Home</a>
+    <a href="./produse.html">Our Catalog</a>
+    <a href="./log in.html" class="active">Log in</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./map.html">Map</a>
+  </div>
 
+  <main>
     <h1 class="header">Welcome! Let us remember you :</h1>
 
     <div class="login-container">
-        <h2>Sign up</h2>
-        <form action="#" method="POST">
-            <input type="text" name="username" class="input-field" placeholder="Surname" required>
-            <input type="password" name="password" class="input-field" placeholder="Name" required>
-            <input type="date" name="birthdate" class="input-field" placeholder="Your birtdate" required>
-            <input type="password" name="password" class="input-field" placeholder="Email" required>
-            <input type="password" name="password" class="input-field" placeholder="Create your password" required>
-            <button type="submit" class="login-btn">Login</button>
-        </form>
+      <h2>Sign up</h2>
+      <form action="#" method="POST">
+        <input type="text" name="surname" class="input-field" placeholder="Surname" required>
+        <input type="text" name="name" class="input-field" placeholder="Name" required>
+        <input type="date" name="birthdate" class="input-field" required>
+        <input type="email" name="email" class="input-field" placeholder="Email" required>
+        <input type="password" name="password" class="input-field" placeholder="Create your password" required>
+        <button type="submit" class="login-btn">Sign Up</button>
+      </form>
     </div>
-    
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
-        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Fruit Salad. All rights reserved.</p>
+    <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+  </footer>
 
 </body>
 </html>

@@ -48,9 +48,11 @@ function addToCart(product) {
     });
   
     totalContainer.textContent = ` Your Total: ${total} US DOLLARS`;
+    renderPaypal(total);
   }
   
   renderCart();
+  
   function renderPaypal(price) {
     if (price === 0) {
       document.getElementById("paypal-button-container").innerHTML = "";

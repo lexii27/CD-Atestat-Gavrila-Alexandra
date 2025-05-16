@@ -6,7 +6,7 @@
     <title>Storage Baskets - Fruit Salad</title>
     <style>
         body {
-            font-family: "Arial", sans-serif;
+        font-family: "Arial", sans-serif;
         width: 100%;
         height: 100vh;
         overflow-x: hidden;
@@ -15,48 +15,43 @@
         background-repeat: repeat;
         background-size: cover;
         background-position: center;
-        background-color: rgb(233, 216, 184);
-        }
-        * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        background-color: rgb(41, 41, 41);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    .navbar {
+      .navbar {
         display: flex;
             justify-content: center;
-            background-color: rgba(255, 255, 255, 0.8); 
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            z-index: 20;
-    }
+            background-color: #222;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .navbar a {
+        text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            padding: 14px 20px;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.3s ease;
+      }
+
+      .navbar a:hover {
+        color: #D3AF37;
+        transform: translateY(-3px);
+      }
+
+      .navbar a.active {
+        border-bottom: 3px solid #D3AF37;
+      }
 
     
-    .navbar a {
-      text-decoration: none;
-      color: rgb(0, 0, 0);
-      font-size: 18px;
-      padding: 14px 20px;
-      margin: 0 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-
-    
-    .navbar a:hover {
-      color: #1d3e58;
-      transform: translateY(-3px);
-    }
-
-    .navbar a.active {
-      color: #000000;
-      border-bottom: 2px solid #8f8f8f;
-    }
         .container {
             max-width: 1200px;
             margin: 100px auto;
@@ -169,36 +164,7 @@
         z-index: -1;
         background-size: cover; 
     }
-    #cart {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #fafafa;
-            color: rgb(0, 0, 0);
-            padding: 15px;
-            
-            font-size: 20px;
-            cursor: pointer;
-        }
-     
-     #cartModal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 30px;
-            overflow-y: auto;
-        }
-
-        #cartModal .cart-content {
-            background: #222;
-            padding: 20px;
-            border-radius: 8px;
-        }
+   
         .background{
         position: fixed;
         z-index: -1;
@@ -260,69 +226,13 @@ button:hover {
             <p class="product-description">
                 Storage baskets combine practicality and style, offering a versatile solution for organizing any space. Crafted from materials like woven fibers, fabric, or metal, these baskets come in various sizes and designs to suit different needs. Whether for storing blankets, toys, or accessories, they help declutter while adding a decorative touch. Perfect for living rooms, bedrooms, or bathrooms, storage baskets provide both function and flair, making them an essential part of any home organization system.
             </p>
-            <button onclick="addToCart('Coffee table')">Add to Cart</button>
+            <p class="product-price">$29.99</p>
+        <button onclick="addToCart({ id: 'product 10', name: 'Storage baskets', price: 29.99 })">Add to cart</button>
+        <script src="script.js"></script>
         </div>
     </div>
     
-<div id="cart">
-    
-    <span id="cartCount">
-        <h4 style="display: inline; margin: 0;">Your cart :</h4> 0
-      </span>
-</div>
 
-
-<div id="cartModal">
-    <div class="cart-content">
-        <h2>Your Cart</h2>
-        <ul id="cartItems"></ul>
-        
-        <button onclick="closeCart()">Close</button>
-    </div>
-</div>
-
-<script>
-    let cart = [];
-    let total = 0;
-
-    
-    function addToCart(productName, price) {
-        cart.push({ productName, price });
-        total += price;
-        updateCart();
-    }
-
-    
-    function updateCart() {
-        const cartCount = document.getElementById('cartCount');
-        const cartItems = document.getElementById('cartItems');
-        const totalPrice = document.getElementById('totalPrice');
-
-       
-        cartCount.innerText = cart.length;
-
-        
-        cartItems.innerHTML = '';
-        cart.forEach(item => {
-            const li = document.createElement('li');
-            li.innerText = `${item.productName} - $${item.price}`;
-            cartItems.appendChild(li);
-        });
-
-        
-        totalPrice.innerText = total.toFixed(2);
-    }
-
-   
-    document.getElementById('cart').onclick = function () {
-        document.getElementById('cartModal').style.display = 'block';
-    };
-
-    
-    function closeCart() {
-        document.getElementById('cartModal').style.display = 'none';
-    }
-</script>
 
     <div class="recommended-section">
         <h2 class="recommended-title">Recommended Products</h2>
@@ -340,10 +250,10 @@ button:hover {
                 <a href="./moderntable.html" class="view-details">View Details</a>
             </div>
             <div class="recommended-item">
-                <img src="./modern lam" alt="Modern Lamp" class="recommended-img">
+                <img src="./modern lamp2.jpg" alt="Modern Lamp" class="recommended-img">
                 <h3 class="recommended-name">Modern Lamp</h3>
                 <p class="recommended-price">$99.99</p>
-                <a href="#" class="view-details">View Details</a>
+                <a href="./modern lamp.html" class="view-details">View Details</a>
             </div>
         </div>
     </div>
